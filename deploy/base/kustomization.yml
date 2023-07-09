@@ -1,0 +1,5 @@
+commonLabels:
+  app: jupyter
+resources:
+- deployment.yml
+- service.yml

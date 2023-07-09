@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jupyter
+spec:
+  template:
+    spec:
+      containers:
+      - name: jupyter
+        image: images.home.mtaylor.io/jupyter:latest
+        imagePullPolicy: Always

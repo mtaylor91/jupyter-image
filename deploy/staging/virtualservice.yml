@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: jupyter
+spec:
+  gateways:
+  - istio-gateways/home-mtaylor-io
+  hosts:
+  - jupyter.home.mtaylor.io
+  http:
+  - name: jupyter-routes
+    route:
+    - destination:
+        host: jupyter.notebook.svc.cluster.local
+        port:
+          number: 80

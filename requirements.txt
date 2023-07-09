@@ -7,5 +7,4 @@ lpips
 imageio
 torchmetrics
 scikit-image
-tinycudann
 jupyterlab

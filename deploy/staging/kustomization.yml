@@ -1,0 +1,5 @@
+namespace: notebook
+resources:
+- ../base
+- namespace.yml
+- virtualservice.yml
