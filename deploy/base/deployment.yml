@@ -9,3 +9,12 @@ spec:
       - name: jupyter
         image: images.home.mtaylor.io/jupyter:latest
         imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        resources:
+          limits:
+            nvidia.com/gpu: 1
+      tolerations:
+      - key: nvidia.com/gpu
+        operator: Exists
+        effect: NoSchedule
