@@ -2,6 +2,7 @@
 kind: pipeline
 type: kubernetes
 name: build
+service_account_name: kube-deployer
 steps:
 - name: image
   image: images.home.mtaylor.io/drone-kaniko:latest
