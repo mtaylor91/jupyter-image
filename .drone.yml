@@ -20,16 +20,6 @@ steps:
   when:
     ref:
     - refs/tags/*
-trigger:
-  event:
-  - push
-  - tag
-  - custom
----
-kind: pipeline
-type: kubernetes
-name: promote
-steps:
 - name: release
   image: images.home.mtaylor.io/deployer:latest
   commands:
@@ -43,8 +33,11 @@ steps:
   - git commit -m "Release $${tag}"
   - git tag $${tag}
   - git push origin $${tag}
+  when:
+    branch:
+    - main
 trigger:
   event:
-  - promote
-  target:
-  - production
+  - push
+  - tag
+  - custom
