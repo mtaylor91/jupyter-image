@@ -3,6 +3,8 @@ kind: Deployment
 metadata:
   name: jupyter
 spec:
+  strategy:
+    type: Recreate
   template:
     spec:
       containers:
