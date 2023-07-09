@@ -13,6 +13,9 @@ steps:
     username: anonymous
     password: anonymous
     registry: images.home.mtaylor.io
+  when:
+    ref:
+    - refs/tags/*
 - name: deploy
   image: images.home.mtaylor.io/deployer:latest
   commands:
