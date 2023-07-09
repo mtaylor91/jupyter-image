@@ -9,4 +9,5 @@ RUN /opt/venv/bin/pip install -r /tmp/requirements.txt
 ADD docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 RUN adduser --disabled-password --gecos '' --uid 1000 jupyter
 USER jupyter
+WORKDIR /home/jupyter
 ENTRYPOINT ["docker-entrypoint.sh"]
