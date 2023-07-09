@@ -10,4 +10,5 @@ ADD docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 RUN adduser --disabled-password --gecos '' --uid 1000 jupyter
 USER jupyter
 WORKDIR /home/jupyter
+ENV PATH=/opt/venv/bin:/usr/local/bin:/usr/bin:/bin
 ENTRYPOINT ["docker-entrypoint.sh"]
