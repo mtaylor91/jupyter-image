@@ -9,3 +9,5 @@ torchmetrics
 scikit-image
 jupyterlab
 matplotlib
+Pillow
+opencv-python
